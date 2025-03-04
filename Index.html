@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priya - Personal Paid Services</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .navbar {
+      background: #6C63FF;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('your-image.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero button {
+      background: #6C63FF;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .about, .services, .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .services .service {
+      background: white;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .services .service h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .services .service p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .services .service .price {
+      font-size: 20px;
+      color: #333;
+    }
+    .services .service .original-price {
+      text-decoration: line-through;
+      color: #999;
+    }
+    .services .service .discounted-price {
+      color: #FF5722; /* Orange color for discounted price */
+      font-weight: bold;
+    }
+    .services .service button {
+      background: #6C63FF;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact form input, .contact form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact form button {
+      background: #6C63FF;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+    }
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    /* WhatsApp Button Styling */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366; /* WhatsApp green color */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    /* WhatsApp Button Animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        font-size: 20px;
+        padding: 15px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+      .services .service {
+        margin: 15px 0;
+      }
+      .services .service h3 {
+        font-size: 20px;
+      }
+      .services .service p {
+        font-size: 16px;
+      }
+      .services .service .price {
+        font-size: 18px;
+      }
+      .contact form input, .contact form textarea {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        font-size: 18px;
+        padding: 10px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      .services .service {
+        margin: 10px 0;
+      }
+      .services .service h3 {
+        font-size: 18px;
+      }
+      .services .service p {
+        font-size: 14px;
+      }
+      .services .service .price {
+        font-size: 16px;
+      }
+      .contact form input, .contact form textarea {
+        width: 100%;
+      }
+    }
+  </style>
+  <!-- Update Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Menu</a>
+    <a href="#contact">Contact</a>
+  </header>
+
+  <!-- Hero Section (Home) -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Let’s Connect!</h1>
+      <button type="button" onclick="location.href='#services'">Book Now</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Hi, I’m Priya</h2>
+    <p>I specialize in providing personalized paid services. Let’s connect and make your day better!</p>
+  </section>
+
+  <!-- Services Section (Menu) -->
+  <section class="services" id="services">
+    <h2>My Services</h2>
+    <div class="service">
+      <h3>Chat</h3>
+      <div class="price">
+        <span class="original-price">₹299 per 30 minutes</span>
+        <span class="discounted-price">₹198 per 30 minutes (34% off!)</span>
+      </div>
+      <button type="button" onclick="location.href='upi://pay?pa=sonu96085815@ybl&pn=Priya&am=198&cu=INR&tn=Priya+Chat+Service'">Book Now</button>
+    </div>
+    <div class="service">
+      <h3>Video Call</h3>
+      <div class="price">
+        <span class="original-price">₹599 per hour</span>
+        <span class="discounted-price">₹399 per hour (33% off!)</span>
+      </div>
+      <button type="button" onclick="location.href='upi://pay?pa=sonu96085815@ybl&pn=Priya&am=399&cu=INR&tn=Priya+Video+Call+Service'">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="submit-form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Priya. All rights reserved.
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/9608581504" target="_blank" class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+  </a>
+</body>
+</html>
